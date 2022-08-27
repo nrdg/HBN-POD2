@@ -1,0 +1,8 @@
+[submodule "derivatives/afq"]
+	path = derivatives/afq
+	url = ./derivatives/afq
+	datalad-id = 7ac3bb0b-a231-4531-afa0-cb59b7c79cb3
+[submodule "derivatives/qsiprep"]
+	path = derivatives/qsiprep
+	url = ./derivatives/qsiprep
+	datalad-id = dfd07c6e-8b35-4ea0-999f-caaa44c40f38
