@@ -22,7 +22,7 @@ it can be found in the [DataLad Handbook](https://handbook.datalad.org/en/latest
 A DataLad dataset can be `cloned` by running
 
 ```
-datalad clone <url>
+datalad clone https://github.com/nrdg/HBN-POD2.git
 ```
 
 Once a dataset is cloned, it is a light-weight directory on your local machine.
@@ -41,13 +41,28 @@ datalad get <path/to/directory/or/file>
 This command will trigger a download of the files, directories, or subdatasets
 you have specified.
 
-DataLad datasets can contain other datasets, so called *subdatasets*.  If you
+DataLad datasets can contain other datasets, so called *subdatasets*. If you
 clone the top-level dataset, subdatasets do not yet contain metadata and
-information on the identity of files, but appear to be empty directories. In
-order to retrieve file availability metadata in subdatasets, run
+information on the identity of files, but appear to be empty directories.
+In particular, this dataset contains two subdatasets, one for the QSIPrep
+derivative dataset in `derivatives/qsiprep`, and one for the AFQ derivative
+dataset in `derivatives/afq`.
+In order to retrieve file availability metadata in subdatasets, run
 
 ```
 datalad get -n <path/to/subdataset>
+```
+
+For example, run
+
+```
+datalad get -n derivatives/qsiprep
+```
+
+or
+
+```
+datalad get -n derivatives/afq
 ```
 
 Afterwards, you can browse the retrieved metadata to find out about subdataset
